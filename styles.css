@@ -25,37 +25,37 @@ body {
 
 div.button {
   position: absolute;
-  width: 10vw;
-  height: 20vh;
-  margin-top: -5vmax;
-  margin-left: -5vmin;
+  width: 20px;
+  height: 20px;
+  margin-top: -20px; 
+  margin-left: -20px; 
   opacity: 0.25;
 }
 
 div.button[data-index="0"] {
-  top: -10%;
-  left: -10%;
+  top: 100px;
+  left: 100px;
   background-color: rgb(54, 169, 54);
   border-radius: 50%;
 }
 
 div.button[data-index="1"] {
   top: -100px;
-  left: -600px;
+  left: 150px;
   background-color: rgb(190, 52, 52);
   border-radius: 50%;
 }
 
 div.button[data-index="2"] {
   top: 200px;
-  left: -600px;
+  left: -100px;
   background-color: rgb(204, 204, 88);
   border-radius: 50%;
 }
 
 div.button[data-index="3"] {
-  top: 50px;
-  left: -600px;
+  top: -100px;
+  left: -500px;
   background-color: rgb(239, 176, 59);
   border-radius: 50%;
 }
@@ -110,14 +110,14 @@ div.button[data-index="10"] {
 }
 
 div.button[data-index="11"] {
-  top: -195px;
+  top: -105px;
   left: -95px;
   background-color: rgb(102, 241, 102);
   border-radius: 50%;
 }
 
 div.button[data-index="12"] {
-  top: -225px;
+  top: -200px;
   left: 355px;
   background-color: rgb(116, 55, 55);
   border-radius: 50%;
