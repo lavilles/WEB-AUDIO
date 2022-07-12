@@ -25,11 +25,10 @@ body {
 
 div.button {
   position: absolute;
-  width: 180px;
-  height: 180px;
-  margin-top: -50px;
-  margin-left: -50px;
-
+  width: 10vw;
+  height: 20vh;
+  margin-top: -5vmax;
+  margin-left: -5vmin;
   opacity: 0.25;
 }
 
