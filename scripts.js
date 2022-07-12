@@ -12,7 +12,11 @@ let feedback = null;
 const sounds = ['ton1.wav', 'ton2.wav', 'ton3.wav', 'ton4.wav', 'akkordstimmung.wav', 'akkordstimmungflagolet.wav',
   'flagolet11.wav', 'flagolet12.wav', 'flagolet13.wav', 'flagolet14.wav', 'flagolet15.wav', 'flagolet16.wav',
   'flagoletton1.wav', 'flagoletton2.wav', 'flagoletton3.wav', 'flagoletton4.wav', 'flagoletton5.wav', 'flagoletton6.wav', 'loop1ganzesstück.wav']; //hier werden die samples aufgelistet
+  
 const hasLoop = [false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, true]; //hier wird gesagt in welcher reihenfolge die samples loopen oder nicht
+const levels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //hier wird gesagt in welcher reihenfolge die samples loopen oder nicht
+const masterLevel = -12;
+
 const audioBuffers = []; //hier wir ein leerer audiobuffer erstellt
 const sources = [];
 
@@ -48,22 +52,13 @@ function startSound(index) { //funktion startsound wir erstellt
     offset = time % (buffer.duration / 16);
   }
 
+  const gain = audioContext.createGain();
+  gain.connect(filter);
+  gain.connect(delay); //die source die oben dem audiocontext gleichgesetzt wurde wird nun zur destination conected
+  gain.gain.value = dbToLinear(levels[index] + masterLevel);
+
   const source = audioContext.createBufferSource();
-  //const compressor = audioContext.createDynamicsCompressor();
-  //const limiter = audioContext.createLimiter();
-  //limiter.threshold.value = -2;
-  //compressor.threshold.value = -1;
-  //compressor.knee.value = 1;
-  //compressor.ratio.value = 2;
-  //compressor.attack.value = 0;
-  //compressor.release.value = 0.25;  
-  source.connect(filter);
-  source.connect(delay); //die source die oben dem audiocontext gleichgesetzt wurde wird nun zur destination conected
-  //source.connect(reverb);
-  //source.connect(limiter);
-  //source.connect(compressor);
-  //limiter.connect(audioContext.destination);
-  //compressor.connect(audioContext.destination);
+  source.connect(gain);
   source.buffer = buffer;
   source.loop = loop;
   source.start(time, offset);
@@ -117,6 +112,8 @@ function onPress(evt) {
       startSound(index);
       target.classList.add('active');
 
+      console.log('playing:', index);
+      
       if (!hasLoop[index]) {
         setTimeout(() => target.classList.remove('active'), 250);
       }
@@ -138,4 +135,8 @@ function onDelaySliderChange(e){
 function onFeedbackSliderChange(e){
   console.log(feedbackSlider.value);
   feedback.gain.value = feedbackSlider.value;
+}
+
+function dbToLinear(level) {
+  return Math.pow(10, level / 20);
 }
