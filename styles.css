@@ -14,9 +14,6 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
-
-
-
 #buttons {
   position: absolute;
   top: 50%;
@@ -25,158 +22,153 @@ body {
 
 div.button {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-top: -50px; 
-  margin-left: -50px; 
+  width: 10vh;
+  height: 10vh;
+  margin-top: -5vh; 
+  margin-left: -5vh; 
   opacity: 0.25;
 }
 
 div.button[data-index="0"] {
-  top: 100px;
-  left: 100px;
+  top: 16vh;
+  left: 16vw;
   background-color: rgb(54, 169, 54);
   border-radius: 50%;
 }
 
 div.button[data-index="1"] {
-  top: -100px;
+  top: -16vp;
   left: 150px;
   background-color: rgb(190, 52, 52);
   border-radius: 50%;
 }
 
 div.button[data-index="2"] {
-  top: 200px;
+  top: 33vh;
   left: -100px;
   background-color: rgb(204, 204, 88);
   border-radius: 50%;
 }
 
 div.button[data-index="3"] {
-  top: -100px;
+  top: -16vh;
   left: -500px;
   background-color: rgb(239, 176, 59);
   border-radius: 50%;
 }
 
 div.button[data-index="4"] {
-  top: -200px;
+  top: -33vh;
   left: -290px;
   background-color: rgb(110, 220, 243);
   border-radius: 50%;
 }
 
 div.button[data-index="5"] {
-  top: 50px;
+  top: 8vh;
   left: 450px;
   background-color: rgb(231, 84, 167);
   border-radius: 50%;
 }
 
 div.button[data-index="6"] {
-  top: 300px;
+  top: 45vh;
   left: -400px;
   background-color: rgb(117, 88, 204);
   border-radius: 50%;
 }
 
 div.button[data-index="7"] {
-  top: 255px;
+  top: 37vh;
   left: 255px;
   background-color: rgb(66, 64, 57);
   border-radius: 50%;
 }
 
 div.button[data-index="8"] {
-  top: -350px;
+  top: -50vh;
   left: 50px;
   background-color: rgb(71, 49, 88);
   border-radius: 50%;
 }
 
 div.button[data-index="9"] {
-  top: 200px;
+  top: 33vh;
   left: -900px;
   background-color: rgb(230, 255, 175);
   border-radius: 50%;
 }
 
 div.button[data-index="10"] {
-  top: 325px;
+  top: 47vh;
   left: 555px;
   background-color: rgb(127, 207, 178);
   border-radius: 50%;
 }
 
 div.button[data-index="11"] {
-  top: -105px;
+  top: -17vh;
   left: -95px;
   background-color: rgb(102, 241, 102);
   border-radius: 50%;
 }
 
 div.button[data-index="12"] {
-  top: -200px;
+  top: -33vh;
   left: 355px;
   background-color: rgb(116, 55, 55);
   border-radius: 50%;
 }
 
 div.button[data-index="13"] {
-  top: 100px;
+  top: 16vh;
   left: -620px;
   background-color: rgb(142, 142, 89);
   border-radius: 50%;
 }
 
 div.button[data-index="14"] {
-  top: 300px;
+  top: 50vh;
   left: -700px;
   background-color: rgb(122, 90, 30);
   border-radius: 50%;
 }
 
 div.button[data-index="15"] {
-  top: -200px;
+  top: -33vh;
   left: 690px;
   background-color: rgb(26, 112, 129);
   border-radius: 50%;
 }
 
 div.button[data-index="16"] {
-  top: -250px;
+  top: -37vh;
   left: -650px;
   background-color: rgb(79, 28, 57);
   border-radius: 50%;
 }
 
 div.button[data-index="17"] {
-  top: 300px;
+  top: 50vh;
   left: -400px;
   background-color: rgb(74, 104, 32);
   border-radius: 50%;
 }
 
 div.button[data-index="18"] {
-  top: 55px;
+  top: 5vh;
   left: -325px;
   background-color: rgb(0, 0, 0);
   border-radius: 50%;
 }
 
-
-
 div.button.active {
   opacity: 1;
 }
 
-
 /* div.post[data-index="20"] {
 top: 200px;
 left: -200px;
-
-
 } */
 
 #controls{
