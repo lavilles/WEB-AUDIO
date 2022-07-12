@@ -33,8 +33,8 @@ div.button {
 }
 
 div.button[data-index="0"] {
-  top: -5vh;
-  left: -10vw;
+  top: -10%;
+  left: -10%;
   background-color: rgb(54, 169, 54);
   border-radius: 50%;
 }
