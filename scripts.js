@@ -1,13 +1,13 @@
 const cutoffSlider = document.getElementById("cutoff-slider");
 const delaySlider = document.getElementById("delay-slider");
 const feedbackSlider = document.getElementById("feedback-slider");
-const reverbSlider = document.getElementById("reverb-slider");
+//const reverbSlider = document.getElementById("reverb-slider");
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 let filter = null;
 let delay = null;
 let feedback = null;
-let reverb = null;
+//let reverb = null;
 
 const sounds = ['ton1.wav', 'ton2.wav', 'ton3.wav', 'ton4.wav', 'akkordstimmung.wav', 'akkordstimmungflagolet.wav',
   'flagolet11.wav', 'flagolet12.wav', 'flagolet13.wav', 'flagolet14.wav', 'flagolet15.wav', 'flagolet16.wav',
@@ -23,7 +23,7 @@ window.addEventListener('touchstart', onPress); //damit man einen touchscreen ve
 cutoffSlider.addEventListener("input", onCutoffSliderChange);
 delaySlider.addEventListener("input", onDelaySliderChange);
 feedbackSlider.addEventListener("input", onFeedbackSliderChange);
-reverbSlider.addEventListener("input", onReverbSliderChange);
+//reverbSlider.addEventListener("input", onReverbSliderChange);
 
 // load audio buffers (samples)
 for (let i = 0; i < sounds.length; i++) {
@@ -59,7 +59,7 @@ function startSound(index) { //funktion startsound wir erstellt
   //compressor.release.value = 0.25;  
   source.connect(filter);
   source.connect(delay); //die source die oben dem audiocontext gleichgesetzt wurde wird nun zur destination conected
-  source.connect(reverb);
+  //source.connect(reverb);
   //source.connect(limiter);
   //source.connect(compressor);
   //limiter.connect(audioContext.destination);
@@ -100,9 +100,9 @@ function onPress(evt) {
     delay.delayTime.value = 0.25;
     feedback = audioContext.createGain();
     feedback.gain.value = 0.9;
-    reverb = audioContext.createConvolver();
-    reverb.reverbTime = 1;
-    reverb.connect(audioContext.destination);
+    //reverb = audioContext.createConvolver();
+    //reverb.reverbTime = 1;
+    //reverb.connect(audioContext.destination);
     
     delay.connect(feedback);
     feedback.connect(delay);
