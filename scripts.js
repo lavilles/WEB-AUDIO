@@ -14,7 +14,7 @@ const sounds = ['ton1.wav', 'ton2.wav', 'ton3.wav', 'ton4.wav', 'akkordstimmung.
   'flagoletton1.wav', 'flagoletton2.wav', 'flagoletton3.wav', 'flagoletton4.wav', 'flagoletton5.wav', 'flagoletton6.wav', 'loop1ganzesstück.wav']; //hier werden die samples aufgelistet
   
 const hasLoop = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]; //hier wird gesagt in welcher reihenfolge die samples loopen oder nicht
-const levels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //hier wird gesagt in welcher reihenfolge die samples loopen oder nicht
+const levels = [0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //hier wird gesagt in welcher reihenfolge die samples loopen oder nicht
 const masterLevel = -12;
 
 const audioBuffers = []; //hier wir ein leerer audiobuffer erstellt
