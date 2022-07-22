@@ -24,8 +24,8 @@ div.button {
   position: absolute;
   width: 15vh;
   height: 15vh;
-  margin-top: -7.5vh; 
-  margin-left: -7.5vh; 
+  margin-top: -7.5vh;
+  margin-left: -7.5vh;
   opacity: 0.25;
 }
 
@@ -171,12 +171,12 @@ top: 200px;
 left: -200px;
 } */
 
-#controls{
+#controls {
   position: absolute;
   top: 10vh;
   right: 0vw;
-  z-index:2;
-  color:rgb(7, 7, 7);
+  z-index: 2;
+  color: rgb(7, 7, 7);
   font-family: "Bahnschrift", Bold, sans-serif;
   font-size: 20px;
 }
@@ -189,7 +189,7 @@ left: -200px;
   background: rgb(47, 42, 42);
   outline: none;
   border-radius: 5vh;
-  
+
 }
 
 input[type=range]::-webkit-slider-thumb {
